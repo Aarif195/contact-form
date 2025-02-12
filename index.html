@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Contact form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+
+        <form id="contact-form">
+          <div style="display: flex; gap: 1rem" class="fir">
+            <div class="form-item">
+              <div class="firstName">
+                <label for="firstName"
+                  >First Name <span class="required-input">*</span></label
+                >
+                <input type="text" id="first-name" name="firstName" />
+                <p class="form-alert">This field is required</p>
+              </div>
+            </div>
+
+            <div class="form-item">
+              <div class="lastName">
+                <label for="LastName"
+                  >Last Name <span class="required-input">*</span></label
+                >
+                <input type="text" class="active" id="last-name" name="card" />
+                <p class="form-alert">This field is required</p>
+              </div>
+            </div>
+          </div>
+          <!-- last-name -->
+
+          <div class="form-item">
+            <label for="email"
+              >Email Address <span class="required-input">*</span></label
+            >
+            <input type="email" id="email" name="email" />
+            <p class="form-alert">Please enter a valid email address</p>
+          </div>
+
+          <div class="form-item">
+            <label for="query-type"
+              >Query Type <span class="required-input">*</span><label>
+
+            <div class="radio-input">
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="general-enquiry"
+                  name="query-type"
+                  value="General Enquiry"
+                />
+                <label for="general-enquiry">General Enquiry</label>
+              </div>
+
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="support-request"
+                  name="query-type"
+                  value="Support Request "
+                />
+                <label for="support-request">Support Request</label>
+              </div>
+            </div>
+
+            <p class="form-alert">Please select a query type</p>
+          </div>
+
+          <div class="form-item">
+            <label for=""> Message <span class="required-input">*</span></label>
+            <textarea name="message" id="message" rows="4"></textarea>
+
+            <p class="form-alert">This field is required</p>
+          </div>
+          <!-- <p class="form-alert">Please select a query type</p> -->
+
+          <div class="form-item">
+            <div class="consen">
+              <input type="checkbox" id="consent" name="consent" />
+              <label for="consent"
+                >I consent to being contacted by the team
+                <span class="required-input">*</span></label>
+            </div>
+            <p class="form-alert">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+
+          <button class="sub-btn" id="sub-btn" type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="success-message" id="success-message">
+        <div class="message-header">
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          Message Sent!
+        </div>
+        <p>
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(189, 22%, 81%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  cursor: pointer;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+
+input:focus,
+textarea:focus {
+  outline: 1px solid hsl(187, 24%, 22%);
+  border: 1px solid green;
+}
+
+input[type="text"].form-alert,
+input[type="email"].form-alert {
+  border: 1px solid red;
+}
+
+.required-input {
+  color: green;
+}
+
+.form-alert {
+  display: none;
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.form-alert.form-error {
+  display: block;
+}
+
+.contact-form {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  h2 {
+    margin-bottom: 20px;
+    color: grey;
+    font-weight: bold;
+  }
+}
+
+.contact-form .form-item {
+  margin-bottom: 1.5rem;
+}
+
+
+.contact-form .radio-input {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-form .radio-input .radio-option {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: 1px solid green;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+}
+
+.contact-form .radio-input .radio-option:hover {
+  /* background-color: hsl(169, 82%, 27%); */
+  
+}
+
+.contact-form .radio-input .radio-option.active {
+  background-color: rgb(122, 211, 122);
+  outline: 1px solid hsl(187, 24%, 22%);
+  border: 1px solid green;
+}
+
+
+.contact-form input[type="radio"] {
+  appearance: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  outline: 2px solid rgb(116, 240, 116);
+  border-radius: 50%;
+}
+
+.contact-form input[type="radio"]:checked {
+  background-color: green;
+}
+
+.contact-form .radio-input .ratio-option label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: green;
+}
+
+.contact-form .consen {
+  margin-top: 30px;
+}
+
+.contact-form .consen label {
+  cursor: pointer;
+  width: 100%;
+}
+
+/* #last-name+.form-alert {} */
+
+.contact-form button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.contact-form button:hover {
+  background-color: hsl(187, 24%, 22%);
+}
+
+.success-message .message-header {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success-message {
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+  width: max-content;
+  padding: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.success-message.active {
+  display: block;
+  pointer-events: all;
+
+  animation-name: fadeOut;
+  animation-duration: 60s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0%,
+  25%,
+  50%,
+  75% {
+    opacity: 3;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  /* .contact-form .form-item:nth-child(1) {
+    flex-direction: column;
+  } */
+  .contact-form .fir {
+    flex-direction: column;
+  }
+
+  .contact-form .radio-input {
+    flex-direction: column;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+
+}
