@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   font-family: "Karla", sans-serif;
   background-color: hsl(189, 22%, 81%);
   display: flex;
@@ -13,8 +13,8 @@ body {
   flex-direction: column;
   height: 100vh;
   cursor: pointer;
+  gap: 10px;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -25,7 +25,6 @@ textarea {
   border: 1px solid black;
   border-radius: 5px;
 }
-
 
 input:focus,
 textarea:focus {
@@ -54,7 +53,7 @@ input[type="email"].form-alert {
 
 .contact-form {
   background-color: #fff;
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 2rem;
   border-radius: 1rem;
 
@@ -65,10 +64,14 @@ input[type="email"].form-alert {
   }
 }
 
+.contact-form .fir {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .contact-form .form-item {
   margin-bottom: 1.5rem;
 }
-
 
 .contact-form .radio-input {
   display: flex;
@@ -89,7 +92,6 @@ input[type="email"].form-alert {
 
 .contact-form .radio-input .radio-option:hover {
   /* background-color: hsl(169, 82%, 27%); */
-  
 }
 
 .contact-form .radio-input .radio-option.active {
@@ -97,7 +99,6 @@ input[type="email"].form-alert {
   outline: 1px solid hsl(187, 24%, 22%);
   border: 1px solid green;
 }
-
 
 .contact-form input[type="radio"] {
   appearance: none;
@@ -204,20 +205,29 @@ input[type="email"].form-alert {
 }
 
 @media (max-width: 768px) {
-  /* .contact-form .form-item:nth-child(1) {
-    flex-direction: column;
-  } */
+  main {
+    height: 140vh;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+  }
+
   .contact-form .fir {
     flex-direction: column;
   }
 
+
   .contact-form .radio-input {
     flex-direction: column;
+    gap: 1rem;
   }
 
   textarea {
-    height: 200px;
+    height: 100px;
   }
-
-
 }
